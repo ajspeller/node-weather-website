@@ -19,5 +19,8 @@
     "hbs": "^4.0.4",
     "morgan": "^1.9.1",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
