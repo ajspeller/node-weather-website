@@ -15,11 +15,13 @@ const forecast = ({ longitude: lon, latitude: lat }, callback) => {
       return;
     }
     const { temperature, precipProbability } = body.currently;
-    const { summary } = body.daily.data[0];
+    const { summary, dewPoint, humidity } = body.daily.data[0];
     callback(undefined, {
       summary,
       temperature,
-      precipProbability
+      precipProbability,
+      dewPoint,
+      humidity
     });
   });
 };

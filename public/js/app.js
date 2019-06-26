@@ -15,10 +15,16 @@ weatherForm.addEventListener('submit', (e) => {
         messageTwo.textContent = data.err;
       } else {
         const { location, forecast } = data;
-        const { summary, temperature, precipProbability } = forecast;
+        const {
+          summary,
+          temperature,
+          precipProbability,
+          dewPoint,
+          humidity
+        } = forecast;
         messageOne.textContent = location;
         messageTwo.textContent = `${summary} It's currently ${temperature} degrees with a ${precipProbability *
-          100}% chance of rain.`;
+          100}% chance of rain.  The humidity is ${humidity} & the dew point is ${dewPoint}`;
       }
     });
   });
